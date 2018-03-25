@@ -1,9 +1,11 @@
 <template lang="html">
 	<div class="wrap">
 		<div class="head">
+			<!--
 			<div class="back" @click="util.comBack">
 				<img  src="../assets/images/返回.png" alt="">
 			</div>
+			-->
 			<div class="title">分类</div>
 		</div>
 		<div class="block"></div>
@@ -31,12 +33,15 @@
 			  </div>
 		    </div>
 		</div>
-		<NavBottom ></NavBottom>
+		<NavBottom></NavBottom>
 	</div>
 </template>
 <script>
-<NavBottom ></NavBottom>
+import NavBottom from '../components/NavBottom'
 export default {
+	components: {
+		NavBottom
+	},
 	methods: {
 		selecteItem () {
 			let oUrl = event.currentTarget.dataset.url

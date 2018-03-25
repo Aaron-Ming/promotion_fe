@@ -37,26 +37,17 @@
 		</div>
 		<div v-else class="head">
 			<div class="welcome">
-				欢迎来到闲鱼
+				欢迎光临
 			</div>
 			<button class="login" @click="tologin">马上登录</button>
+			<!--
 			<div class="animate"></div>
+			-->
 		</div>
 		<div class="list">
 			<ul class="itemlist">
-				<li class="item item1" @click="fabu">我发布的<span class="number" v-if="login">{{fabunum}}</span></li>
-				<li class="item item2">我卖出的<span class="number" v-if="login">{{sellnum}}</span></li>
 				<li class="item item3" @click="buy">我买到的<span class="number" v-if="login">{{buynum}}</span></li>
-				<li class="item item4">我赞过的<span class="number" v-if="login">{{likenum}}</span></li>
-				<li class="item item5">我的拍卖</li>
-				<li class="item item6">我的鱼贝<span class="number" v-if="login">{{money}}</span></li>
-			</ul>
-		</div>
-		<div class="list" v-if="login">
-			<ul class="itemlist">
-				<li class="item item8">我的公益</li>
-				<li class="item item9">闲鱼Family</li>
-				<li class="item item10">帮助与反馈</li>
+				<li class="item item4">我的收藏<span class="number" v-if="login">{{likenum}}</span></li>
 			</ul>
 		</div>
 		<div class="list">
@@ -95,7 +86,7 @@ export default {
 		console.log(this.isLogin)
 		
 	},
-	computed: mapGetters(['login','starnum','focusnum','fannum','username','fabunum','sellnum','buynum','money','likenum']),
+	computed: mapGetters(['login','starnum','focusnum','fannum','username','buynum','likenum']),
 	methods: {
 		tologin () {
 			this.$router.push({path:'/login'})
@@ -104,14 +95,6 @@ export default {
 			window.localStorage.clear()
 			this.$store.dispatch('noLogin')
             this.$router.push({path: '/my'});
-		},
-		fabu () {
-			if(!this.isLogin){
-				Toast('请先登录再查看')
-			}else{
-				this.$router.push({path: '/fabu'})
-			}
-
 		},
 		buy () {
 			if(!this.isLogin){
@@ -352,12 +335,6 @@ ul,li {
 	right: 1rem;
 	top: 1.5rem;
 }
-.item1 {
-	background-image: url('../assets/images/book.png')
-}
-.item2 {
-	background-image: url('../assets/images/发送.png')
-}
 .item3 {
 	background-image: url('../assets/images/我收到的.png')
 }
@@ -372,14 +349,5 @@ ul,li {
 }
 .item7 {
 	background-image: url('../assets/images/设置.png')
-}
-.item8 {
-	background-image: url('../assets/images/爱心_.png')
-}
-.item9 {
-	background-image: url('../assets/images/闲鱼.png')
-}
-.item10 {
-	background-image: url('../assets/images/帮助.png')
 }
 </style>

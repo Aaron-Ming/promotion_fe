@@ -9,61 +9,58 @@
 			</div>
 			<p class="commit">发布</p>
 		</div>
-		-->
-      <div class="login" :class="{'active':active}" v-show="login">
-        <div class="head">
-          <h2 class="h2">闲鱼赚钱指南</h2>
-          <div class="navbar">
-            <router-link to="/" class="li">
-              <p class="titlename">卖什么更赚</p>
-              <p class="tip">教你卖什更赚钱</p>
-            </router-link>
-            <router-link to="/" class="li">
-              <p class="titlename">拍照相机</p>
-              <p class="tip">看看家里的东西值多少钱</p>
-            </router-link>
-            <router-link to="/" class="li">
-              <p class="titlename">淘宝一键转卖</p>
-              <p class="tip">剁手多了回回血</p>
-            </router-link>
-          </div>
-        </div>
-        <div class="recomlist" >
-            <div  class="type " @click="toaddpic">
-              <div class="image">
-                <img src="../assets/images/收纳盒.png" alt="">
-              </div>
-              <p class="explain">卖闲置</p>
-            </div>
-            <div @click="util.toast" class="type">
-              <div class="image">
-                <img src="../assets/images/房子.png" alt="">
-              </div>
-              <p class="explain">出租房屋</p>
-            </div>
-            <div @click="util.toast" class="type ">
-              <div class="image">
-                <img src="../assets/images/头像.png" alt="">
-              </div>
-              <p class="explain">发布服务</p>
-            </div>
-        </div>
+		<div class="login" :class="{'active':active}" v-show="login">
+			<div class="head">
+				<h2 class="h2">闲鱼赚钱指南</h2>
+				<div class="navbar">
+					<router-link to="/" class="li">
+						<p class="titlename">卖什么更赚</p>
+						<p class="tip">教你卖什更赚钱</p>
+					</router-link>
+					<router-link to="/" class="li">
+						<p class="titlename">拍照相机</p>
+						<p class="tip">看看家里的东西值多少钱</p>
+					</router-link>
+					<router-link to="/" class="li">
+						<p class="titlename">淘宝一键转卖</p>
+						<p class="tip">剁手多了回回血</p>
+					</router-link>
+				</div>
+			</div>
+			<div class="recomlist" >
+				<div  class="type " @click="toaddpic">
+					<div class="image">
+						<img src="../assets/images/收纳盒.png" alt="">
+					</div>
+					<p class="explain">卖闲置</p>
+				</div>
+				<div @click="util.toast" class="type">
+					<div class="image">
+						<img src="../assets/images/房子.png" alt="">
+					</div>
+					<p class="explain">出租房屋</p>
+				</div>
+				<div @click="util.toast" class="type ">
+					<div class="image">
+						<img src="../assets/images/头像.png" alt="">
+					</div>
+					<p class="explain">发布服务</p>
+				</div>
+			</div>
         
-        <div class="footer">
-          <div class="itemblock"></div>
-          <div class="itemblock"></div>
-          <div class="itemblock innerbox">
-            <span class="open"  @click="change3"></span>
-          </div>
-          <div class="itemblock"></div>
-          <div class="itemblock"></div>
-        </div>
-      </div>
-	    <div  class="item item2" :class="{icon44: footerIndex === 3, icon4: footerIndex !== 3}" @click="change2">
-		订阅
-      </div>
-	    <div class="item item2" :class="{icon55: footerIndex === 4, icon5: footerIndex !== 4}" @click="tomy">我的
-      </div>    
+			<div class="footer">
+				<div class="itemblock"></div>
+				<div class="itemblock"></div>
+				<div class="itemblock innerbox">
+					<span class="open"  @click="change3"></span>
+				</div>
+				<div class="itemblock"></div>
+				<div class="itemblock"></div>
+			</div>
+		</div>
+		-->
+	    <div  class="item item2" :class="{icon44: footerIndex === 3, icon4: footerIndex !== 3}" @click="change2">订阅</div>
+	    <div class="item item2" :class="{icon55: footerIndex === 4, icon5: footerIndex !== 4}" @click="tomy">我的</div>
 	</div>
 </template>
 <script>

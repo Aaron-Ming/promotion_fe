@@ -1,5 +1,6 @@
 <template>
 	<div class="wrapper">
+		<!--
 		<section class="header">
 			<div class="scanner">
 				<img src="../assets/images/二维码.png" alt="">
@@ -13,6 +14,7 @@
 			</div>
 		</section>
 		<div class="block"></div>
+		-->
 		<IndexBanner></IndexBanner>
 		<IndexGoods :goodslist="goodslist"></IndexGoods>
 		<IndexRecom :typelist="typelist"></IndexRecom>
