@@ -1,23 +1,13 @@
 <template>
 	<div class="wrapper">
-		<!--
 		<section class="header">
-			<div class="scanner">
-				<img src="../assets/images/二维码.png" alt="">
-				<input type="file" name="file" capture="camera">
-			</div>
 			<router-link to="/search" class="search">
 				<input type="search" placeholder="搜索">
 			</router-link>
-			<div class="morekind" @click="category">
-				<img src="../assets/images/分类.png" alt="">
-			</div>
 		</section>
-		<div class="block"></div>
-		-->
 		<IndexBanner></IndexBanner>
 		<IndexGoods :goodslist="goodslist"></IndexGoods>
-		<IndexRecom :typelist="typelist"></IndexRecom>
+		<IndexNav></IndexNav>
 		<div class="block"></div>
 		<NavBottom ></NavBottom>
 	</div>	
@@ -26,13 +16,13 @@
 import NavBottom from '../components/NavBottom'
 import IndexBanner from '../components/IndexBanner.vue'
 import IndexGoods from '../components/IndexGoods.vue'
-import IndexRecom from '../components/IndexRecom.vue'
+import IndexNav from '../components/IndexNav.vue'
 import {mapActions} from 'vuex'
 export default {
 	components: {
 		IndexBanner,
 		IndexGoods,
-		IndexRecom,
+		IndexNav,
 		NavBottom
 	},
 	data () {
@@ -90,7 +80,7 @@ export default {
 		background-color: #ffda44;
 		z-index:10;
 		position: fixed;
-		top:0;
+		top: 0;
 		display: -webkit-flex;
 		display: flex;
 		align-items: center;
