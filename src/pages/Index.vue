@@ -18,7 +18,6 @@
 		<IndexBanner></IndexBanner>
 		<IndexGoods :goodslist="goodslist"></IndexGoods>
 		<IndexRecom :typelist="typelist"></IndexRecom>
-		<IndexNav></IndexNav>
 		<div class="block"></div>
 		<NavBottom ></NavBottom>
 	</div>	
@@ -28,14 +27,12 @@ import NavBottom from '../components/NavBottom'
 import IndexBanner from '../components/IndexBanner.vue'
 import IndexGoods from '../components/IndexGoods.vue'
 import IndexRecom from '../components/IndexRecom.vue'
-import IndexNav from '../components/IndexNav.vue'
 import {mapActions} from 'vuex'
 export default {
 	components: {
 		IndexBanner,
 		IndexGoods,
 		IndexRecom,
-		IndexNav,
 		NavBottom
 	},
 	data () {

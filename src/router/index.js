@@ -12,11 +12,11 @@ import Content1 from '@/components/Content1'
 import Content2 from '@/components/Content2'
 import Kind from '@/pages/Kind'
 import Buy from '@/pages/Buy'
-import Chat from '@/pages/Chat'
+//import Chat from '@/pages/Chat'
 import Pay from '@/pages/Pay'
 import Addr from '@/pages/Addr'
 import Order from '@/pages/Order'
-import Fabu from '@/pages/Fabu'
+//import Fabu from '@/pages/Fabu'
 Vue.use(Router)
 
 export default new Router({
@@ -69,10 +69,10 @@ export default new Router({
 			path: '/buy',
 			component: Buy,
 		},
-		{
-			path: '/chat',
-			component: Chat
-		},
+//		{
+//			path: '/chat',
+//			component: Chat
+//		},
 		{
 			path: '/pay',
 			component: Pay
@@ -85,9 +85,9 @@ export default new Router({
 			path: '/order',
 			component: Order
 		},
-		{
-			path: '/fabu',
-			component: Fabu
-		}
+//		{
+//			path: '/fabu',
+//			component: Fabu
+//		}
 	]
 })
